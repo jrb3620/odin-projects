@@ -60,21 +60,38 @@ function playRound(human, computer) {
         }
     }
 }
+var human_score = 0
+var computer_score = 0
 const rockButton = document.querySelector("#rock-btn");
 rockButton.addEventListener("click", () => {
     let computer_choice = getComputerChoice();
     playRound("rock", computer_choice);
+    humanScore.textContent = "Human Score: " + human_score;
+    computerScore.textContent = "Computer Score: " + computer_score;
+    scoreContainer.appendChild(humanScore);
+    scoreContainer.appendChild(computerScore);
 });
-const paperButton = document.querySelector("#paper-btn")
+const paperButton = document.querySelector("#paper-btn");
 paperButton.addEventListener("click", () => {
     let computer_choice = getComputerChoice();
     playRound("paper", computer_choice);
+    humanScore.textContent = "Human Score: " + human_score;
+    computerScore.textContent = "Computer Score: " + computer_score;
+    scoreContainer.appendChild(humanScore);
+    scoreContainer.appendChild(computerScore);
 });
-const scissorsButton = document.querySelector("#scissors-btn")
+const scissorsButton = document.querySelector("#scissors-btn");
 scissorsButton.addEventListener("click", () => {
     let computer_choice = getComputerChoice();
     playRound("scissors", computer_choice);
+    humanScore.textContent = "Human Score: " + human_score;
+    computerScore.textContent = "Computer Score: " + computer_score;
+    scoreContainer.appendChild(humanScore);
+    scoreContainer.appendChild(computerScore);
 });
+const scoreContainer = document.querySelector("#score-container");
+const humanScore = document.createElement("div");
+const computerScore = document.createElement("div");
 // function playGame() {
 // while(human_score < 2 && computer_score < 2) { // bo3
 //     let computer_choice = getComputerChoice()
@@ -89,7 +106,6 @@ scissorsButton.addEventListener("click", () => {
 //     console.log("you lose. lol.")
 // }
 // }
-var human_score = 0
-var computer_score = 0
+
 
 // playGame()
