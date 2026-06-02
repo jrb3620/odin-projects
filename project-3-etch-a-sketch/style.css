@@ -1,0 +1,12 @@
+#div-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.div-grid {
+    display: flex;
+    flex: 1 0 6.25%;
+    background: black;
+    width: 100px;
+    height: 100px;
+}

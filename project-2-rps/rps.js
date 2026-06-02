@@ -76,7 +76,7 @@ function updateScore(player, computer) {
     scoreContainer.appendChild(computerScore);
 }
 function resetScore() {
-    const resetButton = document.createElement("button", "reset");
+    const resetButton = document.createElement("button");
     resetButton.textContent = "reset";
     winnerContainer.appendChild(resetButton);
     resetButton.addEventListener("click", () => {
