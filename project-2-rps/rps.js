@@ -60,22 +60,36 @@ function playRound(human, computer) {
         }
     }
 }
+const rockButton = document.querySelector("#rock-btn");
+rockButton.addEventListener("click", () => {
+    let computer_choice = getComputerChoice();
+    playRound("rock", computer_choice);
+});
+const paperButton = document.querySelector("#paper-btn")
+paperButton.addEventListener("click", () => {
+    let computer_choice = getComputerChoice();
+    playRound("paper", computer_choice);
+});
+const scissorsButton = document.querySelector("#scissors-btn")
+scissorsButton.addEventListener("click", () => {
+    let computer_choice = getComputerChoice();
+    playRound("scissors", computer_choice);
+});
+// function playGame() {
+// while(human_score < 2 && computer_score < 2) { // bo3
+//     let computer_choice = getComputerChoice()
+//     let human_choice = getHumanChoice()
+//     playRound (human_choice, computer_choice)
+// }
 
-function playGame() {
-while(human_score < 2 && computer_score < 2) { // bo3
-    let computer_choice = getComputerChoice()
-    let human_choice = getHumanChoice()
-    playRound (human_choice, computer_choice)
-}
-
-if(human_score > computer_score) {
-    console.log("you win. awesome dude.")
-}
-else {
-    console.log("you lose. lol.")
-}
-}
+// if(human_score > computer_score) {
+//     console.log("you win. awesome dude.")
+// }
+// else {
+//     console.log("you lose. lol.")
+// }
+// }
 var human_score = 0
 var computer_score = 0
 
-playGame()
+// playGame()
