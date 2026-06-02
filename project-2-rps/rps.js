@@ -60,34 +60,31 @@ function playRound(human, computer) {
         }
     }
 }
+function updateScore(player, computer) {
+    humanScore.textContent = "Human Score: " + player;
+    computerScore.textContent = "Computer Score: " + computer;
+    scoreContainer.appendChild(humanScore);
+    scoreContainer.appendChild(computerScore);
+}
 var human_score = 0
 var computer_score = 0
 const rockButton = document.querySelector("#rock-btn");
 rockButton.addEventListener("click", () => {
     let computer_choice = getComputerChoice();
     playRound("rock", computer_choice);
-    humanScore.textContent = "Human Score: " + human_score;
-    computerScore.textContent = "Computer Score: " + computer_score;
-    scoreContainer.appendChild(humanScore);
-    scoreContainer.appendChild(computerScore);
+    updateScore(human_score, computer_score)
 });
 const paperButton = document.querySelector("#paper-btn");
 paperButton.addEventListener("click", () => {
     let computer_choice = getComputerChoice();
     playRound("paper", computer_choice);
-    humanScore.textContent = "Human Score: " + human_score;
-    computerScore.textContent = "Computer Score: " + computer_score;
-    scoreContainer.appendChild(humanScore);
-    scoreContainer.appendChild(computerScore);
+    updateScore(human_score, computer_score)
 });
 const scissorsButton = document.querySelector("#scissors-btn");
 scissorsButton.addEventListener("click", () => {
     let computer_choice = getComputerChoice();
     playRound("scissors", computer_choice);
-    humanScore.textContent = "Human Score: " + human_score;
-    computerScore.textContent = "Computer Score: " + computer_score;
-    scoreContainer.appendChild(humanScore);
-    scoreContainer.appendChild(computerScore);
+    updateScore(human_score, computer_score)
 });
 const scoreContainer = document.querySelector("#score-container");
 const humanScore = document.createElement("div");
